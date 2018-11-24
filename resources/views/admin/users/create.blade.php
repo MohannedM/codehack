@@ -22,12 +22,12 @@
 		</div>	
 
 		<div class="form-group">
-			{!! Form::label('status', 'Status:') !!}
-			{!! Form::select('status', [1=>'Active', 0=>'Not Active'], 0,['class' => 'form-control']) !!}
+			{!! Form::label('is_active', 'Status:') !!}
+			{!! Form::select('is_active', [1=>'Active', 0=>'Not Active'], 0,['class' => 'form-control']) !!}
 		</div>	
 		<div class="form-group">
-			{!! Form::label('is_active', 'File:') !!}
-			{!! Form::file('is_active', null,['class' => 'btn btn-default']) !!}
+			{!! Form::label('photo_id', 'Photo:') !!}
+			{!! Form::file('photo_id', null,['class' => 'btn btn-default']) !!}
 		</div>	
 		<div class="form-group">
 			{!! Form::label('password', 'Password:') !!}
