@@ -1,7 +1,8 @@
-@extends('layouts.blog-post');
+@extends('layouts.blog-home');
 
 @section('content')
-
+<div class="row">
+    <div class="col-md-8">
                 <!-- Blog Post -->
 
                 <!-- Title -->
@@ -9,7 +10,7 @@
 
                 <!-- Author -->
                 <p class="lead">
-                    by <a href="#">{{$post->user->name}}</a>
+                    by {{$post->user->name}}
                 </p>
 
                 <hr>
@@ -30,11 +31,7 @@
 
                 <hr>
 
-                @if(Session::has('comment_massege'))
-						
-					{{ session('comment_massege') }}
 
-                @endif
 
                 <!-- Blog Comments -->
 				@if(Auth::check())
@@ -80,7 +77,7 @@
                 <!-- Comment -->
                 <div class="media">
                     <a class="pull-left" href="#">
-                        <img height="64" class="media-object" src="{{$comment->photo}}" alt="">
+                        <img height="64" class="media-object" src="{{Auth::user()->gravatar}}" alt="">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">{{$comment->author}}
@@ -133,7 +130,9 @@
 				@endforeach			
 
 				@endif
-               
+   </div>    <!--  div col md 8   -->  
+   @include('includes.front_sidebar')   
+</div>  <!-- div row -->                          
 @stop
 
 @section('scripts')

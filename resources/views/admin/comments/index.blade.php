@@ -17,6 +17,7 @@
 			<th>Body</th>
 			<th>View Post</th>
 			<th>Approve/Unapprove</th>
+			<th>View Replies</th>
 			<th>Delete</th>
 		</tr>
 	</thead>
